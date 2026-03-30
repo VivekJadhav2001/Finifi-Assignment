@@ -6,19 +6,20 @@ const documentSchema = new mongoose.Schema(
     documentType: {
       type: String,
       required: true,
-      enum: ['po', 'grn', 'invoice'],
+      enum: ["po", "grn", "invoice"],
     },
     poNumber: { type: String, index: true },
-    parsedDocId: { type: mongoose.Schema.Types.ObjectId }, // ref to PO/GRN/Invoice
-    parsedModel: { type: String }, // 'PO' | 'GRN' | 'Invoice'
+    parsedData: { type: Object },
+    parsedDocId: { type: mongoose.Schema.Types.ObjectId },
+    parsedModel: { type: String }, // "Po" | "Grn" | "Invoice"
     status: {
       type: String,
-      enum: ['pending', 'parsed', 'failed'],
-      default: 'pending',
+      enum: ["pending", "parsed", "failed"],
+      default: "pending",
     },
     parseError: { type: String, default: null },
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
-export const Document = mongoose.model("Document",documentSchema)
+export const Document = mongoose.model("Document", documentSchema);

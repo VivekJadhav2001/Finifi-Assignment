@@ -1,22 +1,16 @@
 import mongoose from "mongoose";
 
-export const itemSchema = new mongoose.Schema(
+ const itemSchema = new mongoose.Schema(
   {
-    itemCode: { type: String, default: null },   // primary match key
-    sku: { type: String, default: null },
-    description: { type: String, default: null },
-    quantity: { type: Number, default: 0 },       // PO ordered / Invoice billed
-    receivedQuantity: { type: Number, default: 0 },// GRN received
-    unitPrice: { type: Number, default: null },
-    mrp: { type: Number, default: null },
-    taxableValue: { type: Number, default: null },
-    cgstRate: { type: Number, default: 0 },
-    sgstRate: { type: Number, default: 0 },
-    igstRate: { type: Number, default: 0 },
-    totalAmount: { type: Number, default: null },
-    hsnCode: { type: String, default: null },
+    itemCode:         { type: String, default: null },
+    description:      { type: String, default: null },
+    quantity:         { type: Number, default: 0 },      // PO ordered qty / Invoice billed qty
+    receivedQuantity: { type: Number, default: 0 },      // GRN received qty
+    unitPrice:        { type: Number, default: null },
+    taxableValue:     { type: Number, default: null },
   },
   { _id: false }
 );
 
-export const Item = mongoose.model("Item",itemSchema)
+
+export {itemSchema}
