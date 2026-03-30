@@ -18,11 +18,11 @@
               "key": "file",
               "type": "file",
               "uuid": "4fcdb9f7-c20f-476a-bc72-bfffa762db03",
-              "src": "/C:/Users/vivek jadhav/Downloads/Backend_Hiring/PO.pdf"
+              "src": "/C:/Users/vivek jadhav/Downloads/Backend_Hiring/Invoice.pdf"
             },
             {
               "key": "documentType",
-              "value": "po",
+              "value": "grn",
               "type": "text",
               "uuid": "49819be8-b927-4d5b-a2f5-8f13072a5a6b"
             }

@@ -186,11 +186,42 @@ Response (showing first 3 of 39 items for brevity):
         "_id": "69c9f12365053cf2f0c7918a",
         "originalName": "PO.pdf",
         "documentType": "po",
-        "status": "pending",
+        "status": "parsed",
         "parseError": null,
         "createdAt": "2026-03-30T03:42:27.154Z",
-        "updatedAt": "2026-03-30T03:42:27.154Z",
-        "__v": 0
+        "updatedAt": "2026-03-30T03:46:56.301Z",
+        "__v": 0,
+        "parsedData": {
+            "poNumber": "CI4PO05788",
+            "poDate": "Mar 17, 2026",
+            "vendorName": "CLOUDSTORE RETAIL PRIVATE LIMITED",
+            "items": [
+                {
+                    "itemCode": "Cheesy Spicy Veg Momos",
+                    "description": "Colour: Size: size Brand:Band_2",
+                    "quantity": 50,
+                    "unitPrice": 305,
+                    "taxableValue": 11038.1
+                },
+                {
+                    "itemCode": "11797",
+                    "description": "Meatigo Hot Wings 250.0 g Colour: Size: size Brand:Band_3",
+                    "quantity": 75,
+                    "unitPrice": 175,
+                    "taxableValue": 9500
+                },
+                {
+                    "itemCode": "18003",
+                    "description": "Meatigo Chicken Curry Cut Skinless Frozen 450.0 g Colour: Size: size Brand:Band_1",
+                    "quantity": 120,
+                    "unitPrice": 195,
+                    "taxableValue": 16937.14
+                },
+            ]
+        },
+        "parsedDocId": "69c9f23065053cf2f0c7918f",
+        "parsedModel": "Po",
+        "poNumber": "CI4PO05788"
     }
 }
 ```
@@ -253,6 +284,7 @@ Response (showing first 3 of 39 items for brevity):
             "items": [
                 {
                     "itemCode": "Cheesy Spicy Veg Momos",
+                    "description": "Colour: Size: size Brand:Band_2",
                     "quantity": 50,
                     "receivedQuantity": 0,
                     "unitPrice": 305,
@@ -260,17 +292,68 @@ Response (showing first 3 of 39 items for brevity):
                 },
                 {
                     "itemCode": "11797",
+                    "description": "Meatigo Hot Wings 250.0 g Colour: Size: size Brand:Band_3",
                     "quantity": 75,
                     "receivedQuantity": 0,
                     "unitPrice": 175,
                     "taxableValue": 9500
-                }
-            ]
+                },
+                {
+                    "itemCode": "18003",
+                    "description": "Meatigo Chicken Curry Cut Skinless Frozen 450.0 g Colour: Size: size Brand:Band_1",
+                    "quantity": 120,
+                    "receivedQuantity": 0,
+                    "unitPrice": 195,
+                    "taxableValue": 16937.14
+                },{},{}....
+            ],
+            "documentId": "69c9f12365053cf2f0c7918a",
+            "createdAt": "2026-03-30T03:46:56.240Z",
+            "updatedAt": "2026-03-30T03:46:56.240Z",
+            "__v": 0
         },
-        "grns": [],
+        "grns": [
+            {
+                "_id": "69c9f76865053cf2f0c7919d",
+                "grnNumber": "CI4000020234",
+                "poNumber": "CI4PO05788",
+                "grnDate": "24-3-2026",
+                "items": [
+                    {
+                        "itemCode": "11423",
+                        "description": "Spicy Veg Momos",
+                        "quantity": 0,
+                        "receivedQuantity": 50,
+                        "unitPrice": 220.76,
+                        "taxableValue": 11038.1
+                    },
+                    {
+                        "itemCode": "11797",
+                        "description": "Meatigo Hot Wings",
+                        "quantity": 0,
+                        "receivedQuantity": 75,
+                        "unitPrice": 126.67,
+                        "taxableValue": 9500.03
+                    },
+                    {
+                        "itemCode": "18003",
+                        "description": "Meatigo Chicken Curry Cut Skinless Frozen",
+                        "quantity": 0,
+                        "receivedQuantity": 30,
+                        "unitPrice": 141.14,
+                        "taxableValue": 4234.29
+                    },
+                    {},{}......
+                ],
+                "documentId": "69c9f6bb65053cf2f0c7919b",
+                "createdAt": "2026-03-30T04:09:12.325Z",
+                "updatedAt": "2026-03-30T04:09:12.325Z",
+                "__v": 0
+            }
+        ],
         "invoices": [],
         "reasons": [
-            "grn_not_uploaded"
+            "invoice_not_uploaded"
         ],
         "itemDetails": []
     }
